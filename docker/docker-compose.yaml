@@ -1,0 +1,13 @@
+version: "3"
+services:
+  nodejs:
+    container_name: nodejs
+    build: ./nodejs
+    working_dir: /work
+    stdin_open: true
+    tty: true
+    volumes:
+    - ./nodejs/src/:/work
+  python:
+    container_name: python
+    build: ./python
